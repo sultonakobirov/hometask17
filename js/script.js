@@ -1,4 +1,4 @@
-var dragSrcEl = null;
+let dragSrcEl = null;
 
 function handleDragStart(e) {
 // Сохраняем элемент, который будем перемещать
@@ -33,8 +33,8 @@ return false;
 }
 
 // Добавляем обработчики событий для элементов списка
-var items = document.querySelectorAll('#my-list li');
-for (var i = 0; i < items.length; i++) {
+let items = document.querySelectorAll('#my-list li');
+for (let i = 0; i < items.length; i++) {
 items[i].addEventListener('dragstart', handleDragStart, false);
 items[i].addEventListener('dragover', handleDragOver, false);
 items[i].addEventListener('drop', handleDrop, false);
